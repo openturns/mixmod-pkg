@@ -13,4 +13,5 @@ include /usr/share/dpkg/pkg-info.mk
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-            -DCMAKE_INSTALL_PREFIX:PATH=/usr
+            -DCMAKE_INSTALL_PREFIX:PATH=/usr \
+            -DCMAKE_UNITY_BUILD=ON

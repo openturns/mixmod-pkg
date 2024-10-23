@@ -1,1 +1,1 @@
-usr/lib/libmixmod.so.*
+usr/lib/*/libmixmod.so.*

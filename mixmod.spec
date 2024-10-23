@@ -1,5 +1,5 @@
 Name:           mixmod
-Version:        2.1.10
+Version:        2.1.11
 Release:        1%{?dist}
 Summary:        Classification with Mixture Modelling
 Group:          System Environment/Libraries
@@ -32,12 +32,11 @@ A hierarchical matrix C/C++ library (development files)
 %setup -q
 
 %build
-%cmake .
+%cmake -DCMAKE_UNITY_BUILD=ON .
 %cmake_build
 
 %install
 %cmake_install
-mv %{buildroot}/usr/lib %{buildroot}%{_libdir}
 
 %post -n libmixmod -p /sbin/ldconfig
 %postun -n libmixmod -p /sbin/ldconfig
